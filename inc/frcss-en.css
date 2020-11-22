@@ -1,0 +1,109 @@
+.input{
+background:#000;
+border-right:1px solid #D1FFCB;
+border-left:1px solid #D1FFCB;
+border-top:0px;
+border-bottom:1px;
+text-decoration:none;
+color:#D1FFCB;
+font-family: Trebuchet MS, Arial;
+font-size:12px;
+text-align:left;
+padding-top:5px;padding:0 3px 0 4px
+}
+.input:hover{
+background:#111;
+}
+.title{
+direction:rtl;
+color:#009900;
+text-align:left;
+font-size:18px;
+font-weight:bold;
+border-bottom:6px solid #667755;
+margin:20px 0px 20px 10px;padding-bottom:10px;padding-top:25px
+}
+.bdy{
+background:#000;
+color:#fff;
+direction:ltr
+}
+a:hover{
+color: #82829C;
+}
+
+#header{
+background:url('') no-repeat;height:159px;width:156px;cursor:crosshair;text-align:right
+}
+
+#idover{
+color:#D1FFCB;font-size:16px;font-weight:bold;left:70px;position:relative;top:138px;text-align:right;cursor:crosshair;
+}
+#idover:hover{
+color:green;
+}
+.over{
+color:#00EE00;
+}
+#r-block{
+border-left: 0px solid rgb(181, 115, 41);width:155px;height:230px;direction:rtl;float:right; padding-right:30px
+}
+#l-block{
+border-right: 1px solid rgb(181, 115, 41);width:155px;height:230px;direction:ltr;float:left; padding-right:30px;
+}
+#l-header{
+margin-left:25px
+}
+#l-header h4{
+color:#EF5D2A;
+}
+#l-body{
+padding-right:25px;
+}
+#l-body ul{
+padding-right:0px
+}
+#body{
+width:575px;padding-left:50px;padding-top:40px;margin:0 auto; 
+}
+.nobr{
+white-space:nowrap;
+list-style: none;
+}
+.nobr li{
+padding-top:15px
+}
+.aa,.aa:visited{
+color:white;
+text-decoration: none; border-bottom: none;
+}
+.aa:hover{
+color:#EF5D2A;
+border-bottom: 2px solid #AD5C2A;
+}
+
+#submit{
+background:#003600;
+font-size:11px;
+display:block;
+padding:1px 4px 2px 4px;
+margin:0 auto; 
+border:#888 1px solid;
+color:#D1FFCB; height:25px;
+}
+
+#submit:hover {
+background:#001400;
+cursor:pointer;
+color:#D1FFCB;
+}
+
+#footer{
+padding-right:5em;padding-top:50px;text-align:center;color:silver;font-size:13px
+}
+.b-row{
+padding-top:10px;font-family:Trebuchet MS, Arial;font-size:12px;color:white;
+}
+.example{
+font-size:10px;color:gray;font-style:italic;
+}
