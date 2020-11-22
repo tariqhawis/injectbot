@@ -564,7 +564,7 @@ function _print($output="")
 <div class="b-row"><input type="text" class="input" name="index" id="update" style="width:250px;" />
 <span>  Your Page! "phrases, malicious codes,..."</span></div>
 
-<div id="footer">MIT License 2008-2020 sqlrobot $version - By TrX(TM)
+<div id="footer">MIT License 2008-2020 injrobot $version - By TrX(TM)
 </div>
 </form>
 </div>

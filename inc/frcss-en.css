@@ -33,11 +33,11 @@ color: #82829C;
 }
 
 #header{
-background:url('') no-repeat;height:159px;width:156px;cursor:crosshair;text-align:right
+background:url('') no-repeat;height:150px;cursor:crosshair;text-align:center
 }
 
 #idover{
-color:#D1FFCB;font-size:16px;font-weight:bold;left:70px;position:relative;top:138px;text-align:right;cursor:crosshair;
+color:#D1FFCB;font-size:16px;font-weight:bold;left:20px;position:relative;text-align:right;cursor:crosshair;
 }
 #idover:hover{
 color:green;
