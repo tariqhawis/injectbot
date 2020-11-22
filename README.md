@@ -1,9 +1,4 @@
- # #    #      # #####   ####  #####   ####  ##### 
- # ##   #      # #    # #    # #    # #    #   #   
- # # #  #      # #    # #    # #####  #    #   #   
- # #  # #      # #####  #    # #    # #    #   #   
- # #   ## #    # #   #  #    # #    # #    #   #   
- # #    #  ####  #    #  ####  #####   ####    #   
+# =|)=-injrobot-=|>
 
 ## Powerfull web tool for scans and exploits SQL Injection web vulnerability.
 
