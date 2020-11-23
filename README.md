@@ -26,7 +26,7 @@ With injrobot you can find mostly all kind of exploit types of SQL Injections, i
 
 There are plenty of improvments this script could use, I have listed some of them in TODO.txt file, but I am certain there is much more can be added whether to enhance the performance, or to the frontend to make it prettier and more user friendly!
 
-If you want to add something and have any cool idea related to this tool, please contact me using github issues and I will update the master version.
+If you want to add something and have any cool idea related to this tool, please contact me using [https://github.com/tariqhawis/injrobot/issues](github issues) and I will update the master version.
 
 
 ### Looking for a useful SQL Injection Course?

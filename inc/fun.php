@@ -2,14 +2,6 @@
 include("var.php");
 //set_time_limit(60);
 //===================Functions======================
-function _log()
-{
-    $ip = (empty($_SERVER['REMOTE_ADDR'])) ? '����' : $_SERVER['REMOTE_ADDR'];
-    $info = (empty($_SERVER['HTTP_USER_AGENT'])) ? '����' : $_SERVER['HTTP_USER_AGENT'];
-    $url= (empty($_POST['url'])) ? '����' : $_POST['url'];
-    return $ip."!".$info."!".$url;
-}
-//$dc=@mysqli_connect("localhost","injuser","injP@ss","injdb");
 
 function request($url)
 {
@@ -195,12 +187,7 @@ function inj_make($flag)
     $falseQ=$order."11111";
     $theRquest=array($url.$helps[0].$trueQ."#".$com,$url.$helps[0].$falseQ."#".$com,$url."#".$helps[1]."#".$trueQ."#".$com,$url."#".$helps[1]."#".$falseQ."#".$com,$url."#".$helps[2]."#".$trueQ."#".$com,$url."#".$helps[2]."#".$falseQ."#".$com,$url."#".$helps[3]."#".$trueQ."#".$com,$url."#".$helps[3]."#".$falseQ."#".$com,$url."#".$helps[4]."#".$trueQ."#".$com,$url."#".$helps[4]."#".$falseQ."#".$com);
     $isVuln=check_vuln($theRquest);
-    /* 	if (_true($theRquest)==false)
-            $isVuln = false;
-        else {
-            $isVuln = true;
-            //list($url,$help,,$com,$truePageLength)=explode("#",_true($theRquest));
-        } */
+
     if ($flag==0) { // just check the vulnerability
         return $isVuln;
     } else { // flag > 0
