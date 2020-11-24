@@ -66,6 +66,10 @@ if ($_POST['choice']=='test') {
 
 if ($_POST['choice'] == 'chk_blind') {
 
+    if (isset($_POST["blind_all"]) && isset($_POST["blind_select"])) {
+        _print("<red>You cannot select both options..");
+        exit;
+    }
     if (isset($_POST["blind_all"])) {
         $tables_chars = get_tables();
         if ($tables_chars == false) {
@@ -84,10 +88,16 @@ if ($_POST['choice'] == 'chk_blind') {
             }
         }
     }
-    if (isset($_POST["blind_select"])) {
-        $tbl_name = $_POST["tbl_name"];
-        $col_name = $_POST["col_name"];
-        $rows_no = (int)$_POST["rows_no"];
+    elseif (isset($_POST["blind_select"])) {
+        if (!empty($_POST["tbl_name"]) && !empty($_POST["col_name"]) && !empty($_POST["rows_no"])) {
+            $tbl_name = $_POST["tbl_name"];
+            $col_name = $_POST["col_name"];
+            $rows_no = (int)$_POST["rows_no"];
+        }
+        else {
+            _print("<red>All info should be provided");
+            exit;   
+        }
         $column_chars = get_rows($tbl_name,$col_name,$rows_no);
         if ($column_chars == false) {
             $result="<red>Cannot get any record!";
@@ -101,6 +111,10 @@ if ($_POST['choice'] == 'chk_blind') {
                 $result.="\nRecrods found: ".$cell_chars[$key];
             }
         }
+    }
+    else {
+        _print("<red>None of the options selected..");
+        exit;
     }
     _print($result);
     exit;
