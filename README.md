@@ -1,60 +1,75 @@
-# =|)=-injrobot-=|>
+# =|)=-InjectBot-=|>
 
-## About injrobot
+## About InjectBot
 
-### Powerful web tool for scans and exploits SQL Injection web vulnerability.
-
-A tool I made almost  12 years ago for my own use. I couldn't be more regretful to keep it from public all this long. Now It is time to let other SQLi enthusiasts to use and contribute to this wonderful tool
+InjectBot is a web-based SQL injection scanning and exploiting tool. It can scan any kind of web application whether written in PHP, Java, or ASP.NET, that based on MySQL, MSSQL, MS Access.
 
 
-### Why Injrobot?
+### Why InjectBot?
 
-You may wonder why you would use this tool while there are many sql tools out there that are powerful enough.
-Injrobot designed for two propose in mind; 
+Unlike other SQLi tools out there, injectbot designed for simplicity in mind, while maintaining the speed and accuracy.
 
 
 #### 1st. A user-friendly SQLi tool
 
-Injrobot is as simple as google in web searching. With it, you don't need to setup proxy settings in you browser. And it's a GUI tool! So if you had enough from black screens, then injrobot should be your next tool
+InjectBot is as simple as google in web searching. With it, you don't need to change your proxy settings in the browser. And it's a GUI tool! So if you've had enough from the complexity of the parameters and usage syntax in the black-screen tools, then you should give InjectBot a try.
 
 #### 2nd. A powerful tool!
 
-With injrobot you can find mostly all kind of exploit types of SQL Injections, including MySQL (4, 5 and above), SQL Server (2005, 2008 and above), and MS Access DB; It also covers various kinds of techniques; From fetching tables and data records, to read file from and upload web shell into the target system; And all that with all possible evasion techniques
-.
+With InjectBot you can find mostly all kind of exploit types of SQL Injections, including MySQL (4, 5 and above), MSSQL/SQL Server (2005, 2008 and above), and MS Access DB; It also covers various kinds of techniques; such as fetching users tables and data records, read file from the server, and even let you have a foothold on the server by the ability to upload web shell into the target system; And all that being integrated with evasion techniques that works to 80% of input validation filter.
 
-### Have an idea for InjRobot?
+
+### Who should use InjectBot?
+
+This tools is very useful for whoever wants to test a web applications against SQL Injection vulnerability; whether a developer or a pen tester who need to challenge an application's ability to validate user's inputs effectively. 
+
+
+### Have an idea for InjectBot?
 
 There are plenty of improvements this script could use, I have listed some of them in TODO.txt file, but I am certain there is much more can be added whether to enhance the performance, or to the frontend to make it prettier and more user friendly!
 
-If you want to add something and have any cool idea related to this tool, please contact me using [https://github.com/tariqhawis/injrobot/issues](github issues) and I will update the master version.
+If you want to add something and have any cool idea related to this tool, please contact me using [https://github.com/tariqhawis/injectbot/issues](github issues) and I will update the master version.
 
 
-### How to use Injrobot?
+### How to Install?
 
-The easiest way is to use our docker images which already have our script installed and updated, just run this below command:
+The easiest way is to use our updated docker image which already have our script installed and updated with all necessary dependencies, just run this below command:
 
-``docker run --name injrobot -d -p 8080:80 tariqhawis/injrobot``
+``docker run --name injectbot -d -p 8080:80 tariqhawis/injectbot``
 
-Wait for some time until you get a long hash which means it now up and running, you can confirm the status with : ``docker ps -a``
+After execute it in your terminal, wait for some time until you get a long hash which means it now up and running, you can confirm the status with this command: ``docker ps -a``
 now open your browser and type the url:
 
 http://localhost:8080/
 
-You should see the script's black and green page!
+A web interface should loaded with InjectRobot at the header!
 
-Of course, as and alternative way you can always have the liberty to clone and install the script on your own apache server if it's already there and it should work as normal.
+Of course, as and alternative way you can always clone and install the tool on your own apache server with PHP and curl library enabled.
+If you do not have any or none of those things, and still don't want to use docker. Run the following command:
+
+Ubuntu:
+``apt -y install apache2 php php-curl``
+
+RHEL (Fedora, CentOS...etc):
+
+``yum -y install httpd php php-curl``
+
+If you have any issue with installation, contact me at issues page, and I will be glad to help:)
+
+
+> No specific php version needed, this tools has been tested on PHP 5.x as well as PHP 7.x
 
 
 ### Looking for a useful SQL Injection Course?
 
-Contact me and ask about the SQL Injection Course, I am preparing for attackers and defenders (100% technical).
+Contact me if you are looking for a course on web penetration testing, web application security, or a course explosively on SQL Injection, I am preparing for attackers and defenders (100% technical).
 
 
 ### Advisory
 
-All the uses of this tool should be used for authorized penetration testing and/or educational purposes only. 
+This tool should be used for authorized penetration testing and/or educational purposes only. 
 Any misuse of this software will not be the responsibility of the author or of any other collaborator. 
 Use it at your own networks and/or with the network owner's permission.
 
 
-MIT License 2008-2020 injrobot - By TrX(TM)
+MIT License 2008-2020 InjectBot :tm: - By TrX
