@@ -1,0 +1,98 @@
+<html>
+
+<head>
+  <title></title>
+  <link rel="shortcut icon" href="inc/favicon.ico">
+  <link rel="stylesheet" href="dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <script src="dist/js/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+  <!------ Include the above in your HEAD tag ---------->
+
+</head>
+
+<body>
+  <!-- Body Form -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="input-group" id="adv-search">
+          <input type="text" class="form-control" placeholder="Search for snippets" />
+          <div class="input-group-btn">
+            <div class="btn-group" role="group">
+              <div class="dropdown dropdown-lg">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
+                <div class="dropdown-menu dropdown-menu-right" role="menu">
+                  <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                      <label for="advance">Select Attack</label>
+                      <select class="form-control" name="select_atk" onchange="showDiv(this)">
+                        <option value="df" selected>Database fingreprint</option>
+                        <option value="fs">Fetch schemas</option>
+                        <option value="fs2">Try#2 Fetch schemas [MS SQL/JET/Access]</option>
+                        <option value="fs3">Try#3 Fetch schemas [MS SQL Server]</option>
+                        <option value="rur">Retrive user records</option>
+                        <option value="rsf">Read server files</option>
+                        <option value="ic">Inject code</option>
+                      </select>
+                    </div>
+                    <div class="form-group" id="rur">
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">Table name</span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="users" />
+                      </div>
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">Column name(s)</span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="username, password" />
+                      </div>
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">Records count</span>
+                        </div>
+                        <select class="form-control" name="rows_no" id="rows_no"></select>
+                      </div>
+                    </div>
+                    <div class="form-group" id="fs">
+                      <label for="contain">Injection Type</label>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sqli_type" value="Classic" />
+                        <label for="contain" class="form-check-label">Classic SQLi</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sqli_type" value="BLind" />
+                        <label for="contain" class="form-check-label">Blind SQLi</label>
+                      </div>
+                    </div>
+                    <div class="form-group" id="rsf">
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">File path</span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="/etc/passwd" />
+                      </div>
+                    </div>
+                    <div class="form-group" id="ic">
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">Payload</span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="<?php system($_GET[cmd]); ?>" />
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <button type="button" class="btn btn-success">Scan</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
