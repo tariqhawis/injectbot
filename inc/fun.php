@@ -136,6 +136,11 @@ function showDiv(element) {
   }
 }
 </script>
+<footer class="footer">
+      <div class="container">
+        <span class="text-muted">MIT License 2009-2020 InjectBot (TM) - By TrX</span>
+      </div>
+    </footer>
 </body>
 </html>
 <?php

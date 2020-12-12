@@ -47,8 +47,8 @@
   }
   #id_over {
     padding-bottom: 20px;
-    color: green;
-    font-size: 13px;
+    color: #00ff00;
+    font-size: 15px;
     font-weight: bold;
     text-align: center;
     cursor: crosshair;
@@ -56,7 +56,7 @@
     white-space: pre;
   }
   #id_over:hover {
-    color: #55ff55;
+    color: #a2fda2;
   }
   #recrd {
     display: none;
@@ -115,4 +115,31 @@ table td, .table th {
 
 .table-hover tbody tr:hover td {
   background-color:#222;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  margin-bottom: 60px; /* Margin bottom by footer height */
+}
+.footer {
+  bottom: 0;
+  width: 100%;
+  height: 60px; /* Set the fixed height of the footer here */
+  line-height: 90px; /* Vertically center the text there */
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+.container {
+  width: auto;
+  max-width: 500px;
+  padding: 0 15px;
 }
