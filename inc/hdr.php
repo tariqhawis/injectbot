@@ -37,7 +37,7 @@ Contact me and ask about the SQL Injection Course, I am preparing for attackers 
   | | | '_ \  | | / _ \ / __| | |  |  _ \  / _ \ | |  
   | | | | | | | ||  __/| (__  | |  | |_) || (_) || |  
  |___||_| |_|_/ | \___| \___| |_|  |____/  \___/ |_|  
-                   |__/                           @TrX             
+                          |__/                           @TariqHawis             
 </div>
 <div class="container">
  <div class="row">
