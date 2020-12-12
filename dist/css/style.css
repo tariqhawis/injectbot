@@ -1,0 +1,118 @@
+  .dropdown.dropdown-lg .dropdown-menu {
+    margin-top: -1px;
+    padding: 6px 20px;
+  }
+  .input-group-btn .btn-group {
+    display: flex !important;
+  }
+  .btn-group .btn {
+    border-radius: 0;
+    margin-left: -1px;
+  }
+  .btn-group .btn:last-child {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+  .btn-group .form-horizontal .btn[type="submit"] {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+  .form-horizontal .form-group {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .form-group .form-control:last-child {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+  @media screen and (min-width: 768px) {
+    #form-scan {
+      width: 500px;
+      margin: 0 auto;
+    }
+    .dropdown.dropdown-lg {
+      position: static !important;
+    }
+    .dropdown.dropdown-lg .dropdown-menu {
+      min-width: 500px;
+    }
+  }
+  #output-screen {
+    width: 500px;
+    margin: 0 auto;
+  }
+  .header {
+    width: 500px;
+    margin: 0 auto;
+  }
+  #id_over {
+    padding-bottom: 20px;
+    color: green;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    cursor: crosshair;
+    font-family: monospace;
+    white-space: pre;
+  }
+  #id_over:hover {
+    color: #55ff55;
+  }
+  #recrd {
+    display: none;
+  }
+  #fschem {
+    display: none;
+  }
+
+.toast {
+  background-color: black;
+}
+#textarea {
+  -moz-appearance: textfield-multiline;
+  -webkit-appearance: textarea;
+  background-color: rgba(0,0,0,0.8);
+  border: 0px solid #000;
+  font: medium -moz-fixed;
+  overflow: auto;
+  padding: 8px;
+  resize: both;
+  width: 500px;
+  height:250px;
+  color:#00ff00;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.table thead th {
+  color: green;
+  width: auto;
+}
+.table tbody td {
+   color: #00ff00;
+   width: auto;
+}
+
+table td, .table th {
+  padding: .5rem;
+}
+.table tr td{
+  border-left-width:2px;
+ border-left-color: green;
+ border-right-width:2px;
+ border-right-color: green;
+}
+
+  
+.first-th::before {
+  content:'[+] ';
+  font-family: 'Courier New', Courier, monospace;
+}
+  
+.first-td::before {
+    content:'[-] ';
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.table-hover tbody tr:hover td {
+  background-color:#222;
+}

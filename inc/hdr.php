@@ -1,17 +1,5 @@
-<?php
-include("var.php");
-?>
 <!--
-  _____       _           _   ____        _   
- |_   _|     (_)         | | |  _ \      | |  
-   | |  _ __  _  ___  ___| |_| |_) | ___ | |_ 
-   | | | '_ \| |/ _ \/ __| __|  _ < / _ \| __|
-  _| |_| | | | |  __/ (__| |_| |_) | (_) | |_ 
- |_____|_| |_| |\___|\___|\__|____/ \___/ \__|
-            _/ |                              
-           |__/                               
-
-MIT License 2008-2020 injrobot - By TrX(TM)
+MIT License 2008-2020 InjectBot - By TrX(TM)
 
 -Advisory
 All the uses of this tool should be used for authorized penetration testing and/or educational purposes only. 
@@ -22,33 +10,35 @@ Use it at your own networks and/or with the network owner's permission.
 Contact me and ask about the SQL Injection Course, I am preparing for attackers and defenders (100% technical).
 
 -->
-<html>
-<head>
-     <title>=|)=-injrobot&trade;-=|></title>
-<LINK href="inc/frcss-en.css" type="text/css" rel="stylesheet">
-<link rel="shortcut icon" href="inc/favicon.ico" >
-<script type="text/javascript" src="inc/xssscript.js"></script>
-</head>
-<body class="bdy" onload="toggleInput()">
-
-<!-- Header -->
-<table align="center">
-     <th><div id="header" title="InjRobot">
-          <div id="idover" style="font-family: monospace;white-space: pre;">
-
- _____       _           _   ____        _   
- |_   _|     (_)         | | |  _ \      | |  
-   | |  _ __  _  ___  ___| |_| |_) | ___ | |_ 
-   | | | '_ \| |/ _ \/ __| __|  _ < / _ \| __|
-  _| |_| | | | |  __/ (__| |_| |_) | (_) | |_ 
- |_____|_| |_| |\___|\___|\__|____/ \___/ \__|
-            _/ |                              
-           |__/                               
-                     
-               <span style='color:red;font-size:9px'>v.<?php echo $version;?></span>
-          </div></div>
-     </th>
-</table>
-
 <!-- Body Form -->
-<div id="body" >
+
+<html>
+
+<head>
+  <title></title>
+  <link rel="shortcut icon" href="inc/favicon.ico">
+  <link rel="stylesheet" href="dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="dist/css/style.css"/>
+  <script src="dist/js/jquery-3.5.1.min.js" ></script>
+  <script src="dist/js/bootstrap.bundle.min.js" ></script>
+  <script src="dist/js/script.js" ></script>
+
+  <!------ Include the above in your HEAD tag ---------->
+</head>
+
+<body class="bg-dark text-dark">
+  <!-- Body Form -->
+<div style='color:red'>
+<noscript>This tool needs JavaScript to run properly!</noscript>
+</div>
+  <div class="container-md" id="id_over">
+  ___          _             _____  ____        _____
+ |_ _| _ __   (_)  ___   ___|_   _|| __ )   ___|_   _|
+  | | | '_ \  | | / _ \ / __| | |  |  _ \  / _ \ | |  
+  | | | | | | | ||  __/| (__  | |  | |_) || (_) || |  
+ |___||_| |_|_/ | \___| \___| |_|  |____/  \___/ |_|  
+            |__/                                      
+</div>
+<div class="container">
+ <div class="row">
+  <div class="col-md-12">
