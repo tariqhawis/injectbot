@@ -138,7 +138,7 @@ function showDiv(element) {
 </script>
 <footer class="footer">
       <div class="container">
-        <span class="text-muted">MIT License 2009-2020 InjectBot (TM) - By TrX</span>
+        <span class="text-muted">GPL-3.0 License 2020 InjectBot &trade; - By Tariq Hawis</span>
       </div>
     </footer>
 </body>

@@ -344,7 +344,7 @@ class Scanner
 class TargetServer
 {
     public $url;
-    public bool $isVuln = false;
+    public $isVuln;
     public $trueLen;
     public $falseLen;
     public $dbinfo;

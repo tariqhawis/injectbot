@@ -55,7 +55,7 @@ After execute it in your terminal, then if you get a long hash then your docker 
 
 Now open Injectbot from your browser using this URL:
 
-http://localhost:8080/
+``http://localhost:8080/``
 
 Second option is to clone this repository and point your apache to the tool's path, you should have PHP and curl library installed. to make sure you have apache/php installed, follow below step
 
@@ -69,8 +69,7 @@ For RHEL (Fedora, CentOS...etc):
 
 If you have any issue with installation, contact me at [github issues](https://github.com/tariqhawis/injectbot/issues), and I will be glad to help:)
 
-
-> No specific php version needed, this tools has been tested on PHP 5.x till PHP 7.x
+** I recommend to use PHP 7.4 with this tool.**
 
 
 # Looking for a useful SQL Injection Course?
@@ -85,4 +84,4 @@ Any misuse of this software will not be the responsibility of the author or of a
 Use it at your own networks and/or with the network owner's permission.
 
 
-MIT License 2009-2020 InjectBot :tm: - By TrX
+GPL-3.0 License 2020 InjectBot :tm: - By Tariq Hawis

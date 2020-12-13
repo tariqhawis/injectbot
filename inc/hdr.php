@@ -1,13 +1,10 @@
 <!--
-MIT License 2008-2020 InjectBot - By TrX(TM)
+GPL-3.0 License 2020 InjectBot - By Tariq Hawis
 
 -Advisory
 All the uses of this tool should be used for authorized penetration testing and/or educational purposes only. 
 Any misuse of this software will not be the responsibility of the author or of any other collaborator. 
 Use it at your own networks and/or with the network owner's permission.
-
--Looking for a useful SQL Injection Course?
-Contact me and ask about the SQL Injection Course, I am preparing for attackers and defenders (100% technical).
 
 -->
 <!-- Body Form -->
@@ -21,12 +18,11 @@ Contact me and ask about the SQL Injection Course, I am preparing for attackers 
   <link rel="stylesheet" href="dist/css/style.css"/>
   <script src="dist/js/jquery-3.5.1.min.js" ></script>
   <script src="dist/js/bootstrap.bundle.min.js" ></script>
-  <script src="dist/js/script.js" ></script>
 
   <!------ Include the above in your HEAD tag ---------->
 </head>
 
-<body class="bg-dark text-dark">
+<body class="text-dark">
   <!-- Body Form -->
 <div style='color:red'>
 <noscript>This tool needs JavaScript to run properly!</noscript>

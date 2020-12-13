@@ -65,13 +65,15 @@
     display: none;
   }
 
-.toast {
-  background-color: black;
+.toast-header {
+  background-color: #1e1f1c !important;
+  border-bottom: 1px solid #000;
 }
+
 #textarea {
   -moz-appearance: textfield-multiline;
   -webkit-appearance: textarea;
-  background-color: rgba(0,0,0,0.8);
+  background-color: #1e1f1ccc;
   border: 0px solid #000;
   font: medium -moz-fixed;
   overflow: auto;
@@ -79,7 +81,7 @@
   resize: both;
   width: 500px;
   height:250px;
-  color:#00ff00;
+  color:#5db33b;
   font-family: 'Courier New', Courier, monospace;
 }
 
@@ -88,7 +90,7 @@
   width: auto;
 }
 .table tbody td {
-   color: #00ff00;
+   color: #5db33b;
    width: auto;
 }
 
@@ -102,7 +104,6 @@ table td, .table th {
  border-right-color: green;
 }
 
-  
 .first-th::before {
   content:'[+] ';
   font-family: 'Courier New', Courier, monospace;
@@ -117,20 +118,24 @@ table td, .table th {
   background-color:#222;
 }
 
-/* Sticky footer styles
--------------------------------------------------- */
+
 html {
   position: relative;
   min-height: 100%;
 }
 body {
   margin-bottom: 60px; /* Margin bottom by footer height */
+  background-color: #403c34 !important;
 }
 .footer {
   bottom: 0;
   width: 100%;
   height: 60px; /* Set the fixed height of the footer here */
   line-height: 90px; /* Vertically center the text there */
+}
+
+.text-muted {
+  color: #6c7d6f !important;
 }
 
 
