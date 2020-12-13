@@ -82,10 +82,10 @@ class Scanner
                 $oddH = $headers[0];
                 $evenH = $headers[1];
 
-                if ($headers[0] != $this->site->trueLen) {
+                if ($headers[0] <= ($this->site->trueLen*0.9)) {
                     $colsCount = $odd[$i]-1;
                     break;
-                } elseif ($headers[1] != $this->site->trueLen) {
+                } elseif ($headers[1] <= ($this->site->trueLen*0.9)) {
                     $colsCount = $even[$i]-1;
                     break;
                 }
@@ -167,7 +167,13 @@ class Scanner
                 $exPage = $this->request(array($looper));
                 preg_match("/$sep1([^>]*|[^<]*)$sep1/i", $exPage[0], $matched);
                 #array('login' => 0: array('id' => 1, 'uname' => 'tariq' ) 1: ....)
-                $dataGems[$tablename][$i] = array_combine($this->site->tblSchemas[$tablename],explode($sep2,$matched[1]));
+                $record = explode($sep2,$matched[1]);
+                if (count($this->site->tblSchemas[$tablename]) != count($record)) {
+                    $short = count($this->site->tblSchemas[$tablename]) - count($record);
+                    $array = array_fill(count($this->site->tblSchemas[$tablename]),$short,"");
+                    $record = array_merge($record,$array);
+                }
+                $dataGems[$tablename][$i] = array_combine($this->site->tblSchemas[$tablename],$record);
                 $i++;
             }
         }
