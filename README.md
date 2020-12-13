@@ -17,22 +17,22 @@ InjectBot is as simple as google in web searching; the options are so simple. Ju
 
 If the target turns out to be vulnerable, a tool will save the target's state and provides further options for you which are as follows:
 
-1. Get target's database and server information:
+* Get target's database and server information:
 
 ![InjectBot database info](https://www.tariqhawis.com/img/injectbot/injectbot-dbinfo.png)
 
 
-2. Get tables information from the current database:
+* Get tables information from the current database:
 
 ![InjectBot tabel schemas](https://www.tariqhawis.com/img/injectbot/injectbot-tableschema.png)
 
 
-3. Fetch data rows of selected table:
+* Fetch data rows of selected table:
 
 ![InjectBot data rows](https://www.tariqhawis.com/img/injectbot/injectbot-datarows.png)
 
 
-4. Switch between classic and blind SQLi in options above.
+* Switch between classic and blind SQLi in options above.
 
 
 # Who should use InjectBot?
@@ -69,7 +69,7 @@ For RHEL (Fedora, CentOS...etc):
 
 If you have any issue with installation, contact me at [github issues](https://github.com/tariqhawis/injectbot/issues), and I will be glad to help:)
 
-** I recommend to use PHP 7.4 with this tool.**
+**I recommend to use PHP 7.4 with this tool.**
 
 
 # Looking for a useful SQL Injection Course?
