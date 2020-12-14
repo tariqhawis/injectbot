@@ -1,21 +1,19 @@
 ![Scan SQL Injection](https://www.tariqhawis.com/img/injectbot/injectbot-flag.png)
 
-# About InjectBot
+# InjectBot
 
-InjectBot is a web-based SQL injection scanning and exploiting tool. 
+A web-based, easy-to-use, SQL injection scanner and exploiter tool. 
 
 # Why InjectBot?
 
-Unlike other SQLi tools out there, Injectbot designed with simplicity in mind, while maintaining the speed and accuracy as possible. 
+Unlike other SQLi tools out there, InjectBot is so simple to use, yet very fast compared to other SQL tools. (*like 1 to 10 faster!!*)
 
-## - A user-friendly SQLi tool
+* InjectBot is as simple as google in web searching; the options are so simple. Just insert the link you want to scan in the scan box then click scan! The tool will show whether the link is vulnerable to SQLi or not.
 
-InjectBot is as simple as google in web searching; the options are so simple. Just insert the link you want to scan in the scan box then click scan! The tool will show whether the link is vulnerable to SQLi or not.
-
+* In case the provided target is vulnerable to SQLi, InjectBot will save the target's state and the previous scan results, this way you don't need to go through same steps while you proceed with your penetration testing
 
 ![InjectBot scan](https://www.tariqhawis.com/img/injectbot/injectbot-scan.png)
 
-If the target turns out to be vulnerable, a tool will save the target's state and provides further options for you which are as follows:
 
 * Get target's database and server information:
 
