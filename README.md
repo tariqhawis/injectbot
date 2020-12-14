@@ -24,7 +24,7 @@ If the target turns out to be vulnerable, a tool will save the target's state an
 
 * Get tables information from the current database:
 
-![InjectBot tabel schemas](https://www.tariqhawis.com/img/injectbot/injectbot-tableschema.png)
+![InjectBot table schemas](https://www.tariqhawis.com/img/injectbot/injectbot-tableschema.png)
 
 
 * Fetch data rows of selected table:
@@ -42,41 +42,28 @@ Whether you are a web developer or pen tester, this tools would be useful to tes
 
 # Requirements
 
-* For docker Image, you need only Docker engine installed on your machine, for more info refer to [Docker Docs](https://docs.docker.com/get-docker/)
+* Option #1: you need Docker engine installed on your machine to run the image as described under installation section down below, for more details about how to use docker, refer to [Docker Docs](https://docs.docker.com/get-docker/)
 
-* To install InjectBot on your own web server, you needs to have php-curl library and PHP version 7.4.
+* Option #2: you need your own web server up and running and have PHP 7.4 plus php-curl library.
 
 
 # Installation
 
-The easiest way is to use our updated docker image which already has injectbot installed and updated with all necessary dependencies, just run this below command:
+The easiest way is to use the docker image which already has injectbot installed & updated at docker hub, just run this below command:
 
-``docker run --name injectbot -d -p 8080:80 tariqhawis/injectbot``
+Bash```docker run --name injectbot -d -p 8080:80 tariqhawis/injectbot```
 
-After execute it in your terminal, then if you get a long hash then your docker is now up and running; you can confirm the status with this command: ``docker ps -a``
+If you have not received any error message, go to the URL: `http://localhost:8080/`
+Now Injectbot is up and running.
 
-Now open Injectbot from your browser using this URL:
-
-``http://localhost:8080/``
-
-Second option is to clone this repository and point your apache to the tool's path, you should have PHP and curl library installed. to make sure you have apache/php installed, follow below step
-
-For Ubuntu/Debian/Kali...etc:
-
-``apt -y install apache2 php php-curl``
-
-For RHEL (Fedora, CentOS...etc):
-
-``yum -y install httpd php php-curl``
+Second option is to clone this repository and point your web server to cloned path.
 
 If you have any issue with installation, contact me at [github issues](https://github.com/tariqhawis/injectbot/issues), and I will be glad to help:)
-
-**I recommend to use PHP 7.4 with this tool.**
 
 
 # Version History/Changelog
 
-InjectBot v1.0 - rebuild and publish release from the old private 0.5 Injectbot 2009.
+InjectBot v1.0 - rebuild and published release from the old private 0.5 Injectbot 2009.
 
 * [+] Complete transition from procedural to object-oriented structure.
 	* [-] Troubleshooting has become much easier with modularity.
@@ -96,7 +83,7 @@ InjectBot v1.0 - rebuild and publish release from the old private 0.5 Injectbot 
 
 * [+] Bugfixes
 	* [-] Fixed content-length with returned -1.
-	* [-] Fixed exploitable number inside html tages for some webpages.
+	* [-] Fixed exploitable number inside html tags for some webpages.
 
 * [+] New front-end design based on Bootstrap 4.
 
@@ -105,7 +92,7 @@ InjectBot v1.0 - rebuild and publish release from the old private 0.5 Injectbot 
 
 There are plenty of improvements this script could use, If you want to add something and have any cool idea related to this tool, please contact me using [github issues](https://github.com/tariqhawis/injectbot/issues) and I will update the master version.
 
-If you are a PHP devloper yourself, feel free to PR this tool, and I will merge the good ideas.
+If you are a PHP developer yourself, feel free to PR this tool, and I will merge the good ideas.
 
 
 # Looking for a useful SQL Injection Course?

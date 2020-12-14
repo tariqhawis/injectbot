@@ -1,11 +1,8 @@
 <?php
-//========= Functions & Included files ==========
-require_once 'inc/hdr.php';
-require_once 'inc/injbot.class.php';
 session_start();
-require_once 'inc/fun.php';
+require_once 'inc/injbot.class.php';
+require_once 'inc/injbot.function.php';
 
-//================ MAIN ===================
 if ( (!isset($_POST["scan"]) && !isset($_POST["url"])) || (isset($_POST["scan"]) && empty($_POST["url"])) ) {
     _print();
     exit;
@@ -16,9 +13,7 @@ if ( (!isset($_POST["scan"]) && !isset($_POST["url"])) || (isset($_POST["scan"])
     session_destroy();
     _print(" Profile cleared..");
     exit;
-} /*else {
-    _print("","");
-}*/
+}
 //============== Scan OPTION =================
 isset($_POST["select_attack"]) ? $option = $_POST['select_attack'] : $option = "";
 
