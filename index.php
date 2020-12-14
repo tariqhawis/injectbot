@@ -20,6 +20,7 @@ isset($_POST["select_attack"]) ? $option = $_POST['select_attack'] : $option = "
 switch ($option) {
 
     case "test":
+        $timer = microtime(true);
         if (isset($_SESSION["target"])) {
             _print(" Already scanned..");
             exit;
@@ -28,6 +29,7 @@ switch ($option) {
         $target = new TargetServer((array)$_POST["url"]);
         $scanner = new Scanner($target);
         $isVuln = $scanner->check_vuln();
+
         $_SESSION["target"] = serialize($target);
         $_SESSION["scanner"] = serialize($scanner);
         if ($isVuln == false) {
@@ -35,7 +37,8 @@ switch ($option) {
             _print(" Target may not be vulnerable!");
             exit;
         }
-        _print(" Target is vulnerable..");
+        $stop = round(microtime(true) - $timer,2);
+        _print(" Vulnerable.. Elapsed time (".$stop." sec)");
         exit;
 
 //========== Database Info OPTION ===========
@@ -46,6 +49,7 @@ switch ($option) {
 #| version_compile_os                         | Linux
 
     case "dbinfo":
+        $timer = microtime(true);
         $msg = " Fetching database info...";
         $target = unserialize($_SESSION["target"]);
         $scanner = unserialize($_SESSION["scanner"]);
@@ -74,11 +78,13 @@ switch ($option) {
         } catch(Exception $e) {
             _print("Cannot fetch database information..");
         }
-        _print($msg,$result);
+        $stop = round(microtime(true) - $timer,2);
+        _print($msg." Elapsed time (".$stop." sec)",$result);
         exit;
 
 //============== [All DBs] Fetch Schemas OPTION =================
     case "fschem":
+        $timer = microtime(true);
         $target = unserialize($_SESSION["target"]);
         $scanner = unserialize($_SESSION["scanner"]);
 
@@ -121,11 +127,13 @@ switch ($option) {
             $target->set_tblSchemas($tblSchemas);
             $_SESSION["target"] = serialize($target);
             $_SESSION["scanner"] = serialize($scanner);
-            _print($msg, $result);
+       	    $stop = round(microtime(true) - $timer,2);
+            _print($msg." Elapsed time (".$stop." sec)", $result);
         }
         exit;
 
     case "recrd":
+        $timer = microtime(true);
 
         if (empty($_POST["tbl_select"])) {
             _print(" Select 'Fetch schemas' first..");
@@ -167,6 +175,7 @@ switch ($option) {
                 }
             }
         }
-        isset($recordsData) ? _print($msg, $result) : _print(" Cannot get any record..");
+        $stop = round(microtime(true) - $timer,2);
+        isset($recordsData) ? _print($msg." Elapsed time (".$stop." sec)", $result) : _print(" Cannot get any record..");
         exit;
 }
