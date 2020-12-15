@@ -72,7 +72,7 @@ body {
   }
   #id_over {
     padding-bottom: 20px;
-    color: #00ff00;
+    color: #a2fda2;
     font-size: 15px;
     font-weight: bold;
     text-align: center;
@@ -81,7 +81,7 @@ body {
     white-space: pre;
   }
   #id_over:hover {
-    color: #a2fda2;
+    color: #00ff00;
   }
   #recrd {
     display: none;
@@ -106,7 +106,7 @@ body {
   resize: both;
   width: 500px;
   height:250px;
-  color:#5db33b;
+  color:#a2fda2;
   font-family: 'Courier New', Courier, monospace;
 }
 
@@ -115,7 +115,7 @@ body {
   width: auto;
 }
 .table tbody td {
-   color: #5db33b;
+   color: #a2fda2;
    width: auto;
 }
 
