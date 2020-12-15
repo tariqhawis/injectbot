@@ -1,6 +1,6 @@
 ![Scan SQL Injection](https://www.tariqhawis.com/img/injectbot/injectbot-flag.png)
 
-# InjectBot
+# InjectBot&trade;
 
 A web-based, easy-to-use, SQL injection scanner and exploiter tool. 
 
@@ -8,48 +8,50 @@ A web-based, easy-to-use, SQL injection scanner and exploiter tool.
 
 Unlike other SQLi tools out there, InjectBot is so simple to use, yet very fast compared to other SQL tools. (*like 1 to 10 faster!!*)
 
-* InjectBot is as simple as google in web searching; the options are so simple. Just insert the link you want to scan in the scan box then click scan! The tool will show whether the link is vulnerable to SQLi or not.
+* InjectBot is as simple as Google with web search; A input box to provide the target, and a list of scan/attack options, and finally a terminal-like screen to show the results of the scanning.
 
-* In case the provided target is vulnerable to SQLi, InjectBot will save the target's state and the previous scan results, this way you don't need to go through same steps while you proceed with your penetration testing
-
-![InjectBot scan](https://www.tariqhawis.com/img/injectbot/injectbot-scan.png)
+* In case the provided target is vulnerable to SQLi, InjectBot will save the target's state with a small rectangle indicating the saved target, and any next scan/attack actions performed will be saved for you to speed up the scan and cut any repeatable steps during the scan on the target. Then whenever you finish with the target, just click on the `x` mark (See the demo down below..).
 
 
-* Get target's database and server information:
+**Current Features:**
 
-![InjectBot database info](https://www.tariqhawis.com/img/injectbot/injectbot-dbinfo.png)
+* Scan the target only to see if whether it's vulnerable.
 
+* Get target's database and server information.
 
-* Get tables information from the current database:
+* Get tables information from the current database.
 
-![InjectBot table schemas](https://www.tariqhawis.com/img/injectbot/injectbot-tableschema.png)
-
-
-* Fetch data rows of selected table:
-
-![InjectBot data rows](https://www.tariqhawis.com/img/injectbot/injectbot-datarows.png)
-
+* Fetch data rows of selected table (select from the table list saved previously).
 
 * Switch between classic and blind SQLi in options above.
 
 
+# DEMO
+
+A complete scan to a web app showing all the above features in only 23 seconds.
+
+![InjectBot SQLi scanning Demo](https://www.tariqhawis.com/img/injectbot/injectbot.gif)
+
+
 # Who should use InjectBot?
 
-Whether you are a web developer or pen tester, this tools would be useful to test web applications against SQL Injection vulnerabilities. 
+Whether you are a web developer or pen tester, red or blue teamer, this tools would be perfect to be in your tools arsenal to test web applications against SQL Injection vulnerabilities.
 
 
 # Requirements
 
-* Option #1: you need Docker engine installed on your machine to run the image as described under installation section down below, for more details about how to use docker, refer to [Docker Docs](https://docs.docker.com/get-docker/)
+* Option #1: Use Docker engine to pull and run injectbot image as described under installation section below, for more details about how to use docker, refer to [Docker Docs](https://docs.docker.com/get-docker/)
 
-* Option #2: you need your own web server up and running and have PHP 7.4 plus php-curl library.
+* Option #2: A need your own web server up and running and have PHP 7.4 plus php-curl library.
 
 
 # Installation
 
 The easiest way is to use the docker image which already has injectbot installed & updated at docker hub, just run this below command:
 
-Bash```docker run --name injectbot -d -p 8080:80 tariqhawis/injectbot```
+```bash
+docker run --name injectbot -d -p 8080:80 tariqhawis/injectbot:latest
+```
 
 If you have not received any error message, go to the URL: `http://localhost:8080/`
 Now Injectbot is up and running.
@@ -105,4 +107,4 @@ Any misuse of this software will not be the responsibility of the author or of a
 Use it at your own networks and/or with the network owner's permission.
 
 
-GPL-3.0 License 2020 InjectBot :tm: - By Tariq Hawis
+GPL-3.0 License 2020 InjectBot&trade; - By Tariq Hawis
