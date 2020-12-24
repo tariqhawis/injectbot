@@ -62,11 +62,6 @@ switch ($option) {
             } else { # Blind is selected
                 $dbinfo = $scanner->get_records("", $payload, 1);
                 $dbinfo = explode($scanner->sep, $dbinfo[0]);
-/*                 $dbinfo[0] = $scanner->blind_fetch("@@GLOBAL.version");
-                $dbinfo[1] = $scanner->blind_fetch("@@GLOBAL.version_comment");
-                $dbinfo[2] = $scanner->blind_fetch("@@GLOBAL.version_compile_os");
-                $dbinfo[3] = $scanner->blind_fetch("database()");
-                $dbinfo[4] = $scanner->blind_fetch("user()"); */
             }
             $target->set_dbInfo($dbinfo);
             $result="<tr><td>| Version<td> | ".$dbinfo[0];

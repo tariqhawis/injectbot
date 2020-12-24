@@ -1,4 +1,5 @@
-![Scan SQL Injection](https://www.tariqhawis.com/img/injectbot/injectbot-flag.png)
+![Scan SQL Injection](https://www.tariqhawis.com/img/injectbot/injectbot-logo.png)
+
 
 # InjectBot&trade;
 
@@ -15,7 +16,7 @@ Unlike other SQLi tools out there, InjectBot is so simple to use, yet very fast 
 
 **Current Features:**
 
-* Scan the target only to see if whether it's vulnerable.
+* Scan the target only to see whether it's vulnerable.
 
 * Get target's database and server information.
 
@@ -30,7 +31,7 @@ Unlike other SQLi tools out there, InjectBot is so simple to use, yet very fast 
 
 A complete scan to a web app showing all the above features in only 23 seconds.
 
-![InjectBot SQLi scanning Demo](https://www.tariqhawis.com/img/injectbot/injectbot.gif)
+![InjectBot SQLi scanning Demo](https://www.tariqhawis.com/img/injectbot/injectbot-demo.gif)
 
 
 # Who should use InjectBot?
@@ -38,27 +39,39 @@ A complete scan to a web app showing all the above features in only 23 seconds.
 Whether you are a web developer or pen tester, red or blue teamer, this tools would be perfect to be in your tools arsenal to test web applications against SQL Injection vulnerabilities.
 
 
-# Requirements
-
-* Option #1: Use Docker engine to pull and run injectbot image as described under installation section below, for more details about how to use docker, refer to [Docker Docs](https://docs.docker.com/get-docker/)
-
-* Option #2: A need your own web server up and running and have PHP 7.4 plus php-curl library.
-
-
 # Installation
 
-The easiest way is to use the docker image which already has injectbot installed & updated at docker hub, just run this below command:
+
+Choose your best option below then open at your browser: `http://localhost:11111`
+
+
+- Option #1: Suitable for linux and MacOS users..
+
+Just run the script `run.sh` that comes with the script as follows 
 
 ```bash
-docker run --name injectbot -d -p 8080:80 tariqhawis/injectbot:latest
+./run.sh
 ```
 
-If you have not received any error message, go to the URL: `http://localhost:8080/`
-Now Injectbot is up and running.
+>Note: in this option you need to have php and php-curl installed in you machine. 
 
-Second option is to clone this repository and point your web server to cloned path.
 
-If you have any issue with installation, contact me at [github issues](https://github.com/tariqhawis/injectbot/issues), and I will be glad to help:)
+- Option #2: Suitable for Windows (and Linux & MacOS) users..
+
+Your best option here is to use docker, for that you may build your image and run the container:
+
+```bash
+docker build -t injectbot .
+docker run -d --name injectbot -p 11111:80 injectbot
+```
+ 
+Or call the updated image from our docker hub:
+
+```bash
+docker run --name injectbot -d -p 11111:80 tariqhawis/injectbot:latest
+```
+
+If you have any issue with the installation, contact me at [github issues](https://github.com/tariqhawis/injectbot/issues), and I will be glad to help:)
 
 
 # Version History/Changelog

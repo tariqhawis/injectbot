@@ -19,11 +19,11 @@ function _print($msg = "", $result = "")
             $target_profile = <<<ECH
           <div class=form-group" >
           <div class="toast" data-autohide="false">
-          <div class="toast-header" style=" background-color: #000;">
-          <strong class="mr-auto text-success">$site_name Added</strong>
-          <small class="text-muted">Clear Profile</small>
+          <div class="toast-header">
+          <strong class="mr-auto text-white">$site_name Added</strong>
+          <small class="text-white">Clear Profile</small>
           <button type="submit" class="ml-2 mb-1 close text-success" data-dismiss="toast" name="close">&times;</button>
-          </div>
+          </d iv>
         </div>
         </div>
     <script>
@@ -37,6 +37,8 @@ function _print($msg = "", $result = "")
              $('.toast').toast('hide');
            });
        });
+window.scrollTo(0,150);
+
      });
     </script>
 ECH;
@@ -74,14 +76,10 @@ Use it at your own networks and/or with the network owner's permission.
 <div style='color:red'>
 <noscript>This tool needs JavaScript to run properly!</noscript>
 </div>
-  <div class="container-md" id="id_over">
-  ___          _             _____  ____        _____
- |_ _| _ __   (_)  ___   ___|_   _|| __ )   ___|_   _|
-  | | | '_ \  | | / _ \ / __| | |  |  _ \  / _ \ | |  
-  | | | | | | | ||  __/| (__  | |  | |_) || (_) || |  
- |___||_| |_|_/ | \___| \___| |_|  |____/  \___/ |_|  
-                          |__/                           @TariqHawis             
-</div>
+  <div class="container id_over">
+    <h1>InjectBot</h1>
+  <p class="small text-right">TariqHawis</p>
+  </div>
 <div class="container">
  <div class="row">
   <div class="col-md-12">
@@ -164,7 +162,10 @@ function showDiv(element) {
           tbl_select.appendChild(opt);
       }
     }
-  } else if (element.value != "fschem" && element.value != "recrd") {
+  } else if (element.value == "fschem" && element.value != "recrd") {
+    document.getElementById("recrd").style.display = "none";
+  }
+  else if (element.value != "fschem" && element.value != "recrd") {
     document.getElementById("recrd").style.display = "none";
     document.getElementById("fschem").style.display = "none";
   }
@@ -177,8 +178,9 @@ function showDiv(element) {
 </script>
 <footer class="footer">
       <div class="container">
-        <span class="text-muted">GPL-3.0 License 2020 InjectBot &trade; - By Tariq Hawis</span>
-      </div>
+        <span class="text-muted">GPL-3.0 License 2020 InjectBot&trade; - 
+          <a href="https://www.tariqhawis.com">tariqhawis.com</a></span> 
+        </div>
     </footer>
 </body>
 </html>

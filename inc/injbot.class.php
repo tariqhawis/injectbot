@@ -32,10 +32,11 @@ class Scanner
         }
 
         do {
-            curl_multi_exec($master, $running);
-            curl_multi_select($master);
-        } while ($running > 0);
-
+            curl_multi_exec($master,$running);
+            if($running>0){
+                curl_multi_select($master,1);
+            }
+        } while($running > 0);
         foreach ($curl_arr as $id => $curl_obj) {
             if ($headerReq == 0) {
                 $results[$id] = curl_multi_getcontent($curl_obj);
