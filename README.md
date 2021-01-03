@@ -76,7 +76,7 @@ If you have any issue with the installation, contact me at [github issues](https
 
 # Version History/Changelog
 
-InjectBot v1.0 - rebuild and published release from the old private 0.5 Injectbot 2009.
+InjectBot v0.1.0 stable
 
 * [+] Complete transition from procedural to object-oriented structure.
 	* [-] Troubleshooting has become much easier with modularity.
